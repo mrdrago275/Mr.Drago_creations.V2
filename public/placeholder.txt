@@ -1,0 +1,2 @@
+This public folder is present for static assets (favicon, images, social cards).
+Add favicon.ico or other static files here.
