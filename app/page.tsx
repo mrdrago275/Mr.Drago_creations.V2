@@ -1,24 +1,36 @@
+import Hero from "../components/Hero";
+import WallpaperGrid from "../components/WallpaperGrid";
+import {
+  FEATURED,
+  TRENDING,
+  NEW_WALLPAPERS,
+} from "../data/wallpapers";
+
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center px-6">
-      <h1 className="text-5xl md:text-7xl font-bold text-primary drop-shadow-lg">
-        Mr. Drago Creations
-      </h1>
+    <>
+      <Hero />
 
-      <p className="mt-6 max-w-2xl text-center text-secondary text-lg md:text-xl">
-        Premium Anime Wallpapers • AI Art • Pinterest Portfolio • Creative
-        Digital Experiences
-      </p>
+      <section className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12 mt-12">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-silver mb-6">
+          Featured Wallpapers
+        </h2>
+        <WallpaperGrid items={FEATURED} />
+      </section>
 
-      <div className="mt-10 flex gap-4">
-        <button className="rounded-2xl bg-primary px-8 py-3 text-white shadow-glow transition hover:scale-105 hover:animate-glow">
-          Explore
-        </button>
+      <section className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12 mt-12">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-silver mb-6">
+          Trending Wallpapers
+        </h2>
+        <WallpaperGrid items={TRENDING} />
+      </section>
 
-        <button className="rounded-2xl border border-primary px-8 py-3 transition hover:bg-primary hover:text-white">
-          Contact
-        </button>
-      </div>
-    </main>
+      <section className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12 mt-12 mb-16">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-silver mb-6">
+          New Arrivals
+        </h2>
+        <WallpaperGrid items={NEW_WALLPAPERS} />
+      </section>
+    </>
   );
 }
