@@ -1,53 +1,122 @@
 import type { Config } from "tailwindcss";
 
+
 const config: Config = {
+
   content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./pages/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}"
   ],
+
+
   theme: {
+
     extend: {
+
+
       colors: {
-        background: "#0b0b0b",
-        foreground: "#ffffff",
-        primary: "#e60023",
-        secondary: "#c0c0c0",
-        accent: "#ff1744",
+
+        matte: {
+
+          DEFAULT: "#0b0b0b",
+
+          800: "#0f0f0f",
+
+          900: "#050505"
+
+        },
+
+
+        pinterest: {
+
+          500:"#e60023"
+
+        },
+
+
+        silver: {
+
+          100:"#e6e6e6",
+
+          300:"#a8a8a8"
+
+        }
+
       },
 
-      fontFamily: {
-        sans: ["Inter", "sans-serif"],
-      },
 
-      borderRadius: {
-        xl: "1rem",
-        "2xl": "1.5rem",
-      },
-
-      boxShadow: {
-        glow: "0 0 20px rgba(230,0,35,0.5)",
-      },
-
-      animation: {
-        float: "float 6s ease-in-out infinite",
-        glow: "glow 2s ease-in-out infinite alternate",
-      },
 
       keyframes: {
-        float: {
-          "0%,100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        glow: {
-          from: { boxShadow: "0 0 5px rgba(230,0,35,0.3)" },
-          to: { boxShadow: "0 0 25px rgba(230,0,35,0.8)" },
-        },
+
+
+        fadeIn: {
+
+          "0%":{
+
+            opacity:"0",
+
+            transform:"translateY(10px)"
+
+          },
+
+
+          "100%":{
+
+            opacity:"1",
+
+            transform:"translateY(0)"
+
+          }
+
+        }
+
       },
-    },
+
+
+
+      animation: {
+
+
+        fadeIn:
+
+        "fadeIn .4s ease-out both"
+
+
+      },
+
+
+
+      boxShadow: {
+
+
+        "soft-glass":
+
+        "0 8px 30px rgba(2,6,23,.65)",
+
+
+        "red-glow":
+
+        "0 0 25px rgba(230,0,35,.45)"
+
+      },
+
+
+
+      borderRadius: {
+
+        "xl-2":"1.125rem"
+
+      }
+
+    }
+
   },
-  plugins: [],
+
+
+  plugins:[]
+
 };
+
 
 export default config;
