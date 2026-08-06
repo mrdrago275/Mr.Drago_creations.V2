@@ -1,4 +1,5 @@
 User-agent: *
+
 Allow: /
 
-Sitemap: https://mrdrago275.github.io/Mr.drago_creation/sitemap.xml
+Sitemap: https://mrdragocreations.com/sitemap.xml
