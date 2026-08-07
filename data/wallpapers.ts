@@ -12,7 +12,7 @@ export const FEATURED= [
   },
   ];
 
-export const NEW-WALLPAPERS= [
+export const NEW_WALLPAPERS= [
   {  id: 3,
      title: "Dragon Logo",
      image: "/wallpapers/Dragon-Logo/black-dragon.png"
